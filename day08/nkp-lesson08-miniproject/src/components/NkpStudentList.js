@@ -1,52 +1,35 @@
-import React, { Component } from "react";
-import NkpStudent from "./NkpStudent";
+import React, { Component } from 'react';
+import NkpStudent from './NkpStudent';
 
-class NkpStudentList extends Component {
-    constructor(props){
-        super(props);
-
-    }
-        // Hàm xử lý sự kiện xêm
-    nkpHandleView = (nkpStudent)=>{
-        // Chuyển dữ liệu lên NkpApp
-        this.props.onNkpHandleView(nkpStudent);
-    }
-
-
+export default class NkpStudentList extends Component {
   render() {
-    // lấy dữ liệu trong props từ NkpApp chuyển xuống
-    let {renderNkpStudents} = this.props;
-    console.log("List:",renderNkpStudents);
-    
-    // chuyển dữ liệu vào NkpStudent để hiển thị
-    let nkpElementStudent = renderNkpStudents.map((nkpItem,index)=>{
-        return <NkpStudent key={index} renderNkpStudent={nkpItem} onNkpHandleView={this.nkpHandleView} />
-    })
-    return (
-      <div className="card-body">
-        <h3 className="card-title">Danh sách sinh viên</h3>
-        <div className="table-responsive pt-3">
-          <table className="table table-bordered">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Mã sinh viên</th>
-                <th>Tên sinh viên</th>
-                <th>Tuổi</th>
-                <th>Giới tính</th>
-                <th>Hành động</th>
-              </tr>
-            </thead>
-            <tbody>
+    let { renderNkpStudents, onNkpHandleView, onNkpHandleEdit, onNkpHandleDelete } = this.props;
 
-             {nkpElementStudent}
-              
-            </tbody>
-          </table>
-        </div>
-      </div>
+    return (
+      <table className="table table-bordered">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Mã SV</th>
+            <th>Họ tên</th>
+            <th>Tuổi</th>
+            <th>Giới tính</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody>
+          {renderNkpStudents.map((student, index) => (
+            <NkpStudent
+              key={student.nkpID}
+              nkpIndex={index + 1}
+              renderNkpStudent={student}
+              onNkpHandleView={onNkpHandleView}
+              onNkpHandleEdit={onNkpHandleEdit}
+              onNkpHandleDelete={onNkpHandleDelete}
+            />
+          ))}
+        </tbody>
+      </table>
     );
   }
 }
-
-export default NkpStudentList;
