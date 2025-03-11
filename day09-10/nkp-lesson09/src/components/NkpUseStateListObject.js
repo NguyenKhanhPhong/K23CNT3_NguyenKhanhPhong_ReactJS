@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 const NkpUseStateListObject = () => {
   const [students, setStudents] = useState([
-    { id: "SV001", name: "Nguyễn Khánh Phong", age: 20, class: "K23CNT3" },
-    { id: "SV002", name: "Nguyễn Quang A22", age: 23, class: "K23CNT1" },
-    { id: "SV003", name: "Nguyễn Quang B21", age: 21, class: "K23CNT1" },
-    { id: "SV004", name: "Nguyễn Quang C23", age: 23, class: "K23CNT1" }
+    { id: "SV001", name: "Nguyễn Khánh Phong", age: 19, class: "K23CNT3" },
+    { id: "SV002", name: "Nguyễn ASD", age: 23, class: "K23CNT1" },
+    { id: "SV003", name: "Nguyễn BCA", age: 21, class: "K23CNT1" },
+    { id: "SV004", name: "Nguyễn BFD", age: 23, class: "K23CNT1" }
   ]);
 
   return (

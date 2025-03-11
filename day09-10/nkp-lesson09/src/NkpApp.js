@@ -6,7 +6,7 @@ import NkpEffect1 from "./components/NkpEffect1";
 const App = () => {
   return (
     <div style={{ padding: "20px" }}>
-      <h1>React Hook</h1>
+      <h1> Nguyễn Khánh Phong - React Hook</h1>
       <NkpUseState />
       <NkpUseStateListObject />
       <NkpEffect1 />
