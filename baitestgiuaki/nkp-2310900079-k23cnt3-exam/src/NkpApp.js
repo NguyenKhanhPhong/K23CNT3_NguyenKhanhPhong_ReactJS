@@ -4,10 +4,10 @@ import NkpProductAdd from './components/NkpProductAdd';
 
 export default function NkpApp() {
   const nkpProduct = [
-    { nkppId: "2310900023", nkppName: "Nguyễn Khánh Phong", nkppQuantity: 20, nkppPrice: 400000 },
-    { nkppId: "SP001", nkppName: "Laptop Lenovo", nkppQuantity: 50, nkppPrice: 756232 },
-    { nkppId: "SP002", nkppName: "Laptop asus", nkppQuantity: 60, nkppPrice: 967254 },
-    { nkppId: "SP003", nkppName: "Macbook", nkppQuantity: 70, nkppPrice: 642646 },
+    { nkppId: "2310900079", nkppName: "Nguyễn Khánh Phong", nkppQuantity: 1, nkppPrice: 1000 },
+    { nkppId: "SP01", nkppName: "MT2", nkppQuantity: 50, nkppPrice: 123123 },
+    { nkppId: "SP02", nkppName: "MT3", nkppQuantity: 60, nkppPrice: 123123 },
+    { nkppId: "SP03", nkppName: "MT4", nkppQuantity: 70, nkppPrice: 123457 },
   ];
   
   const [nkpProductList, setNkpProductList] = useState(nkpProduct);
